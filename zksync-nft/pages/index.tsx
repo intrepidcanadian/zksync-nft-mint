@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           {tokenBalanceisLoading ? (
             <p>Loading...</p> 
           ) : (
-            <p>Total ERC20 Balance: {ethers.utils.formatUnits(tokenBalance)}</p> 
+            <p>Total ERC20 Balance: {tokenBalance? ethers.utils.formatUnits(tokenBalance) : 'Connect Wallet to check ERC20 Balance. Loading...'}</p> 
           )}
           
       </main>
